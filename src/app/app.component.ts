@@ -17,10 +17,12 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent implements OnInit{
   query: string;
   artists: any; 
+  currentArtist: any;
 
 showArtist(item: any){
   this.query = item.name
   item.highlight = !item.highlight //Create a toggle when the artist is selected
+  this.currentArtist = item
 }
 
   constructor(private http: HttpClient){
