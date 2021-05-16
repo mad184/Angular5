@@ -19,6 +19,7 @@ export class AppComponent {
 
 showArtist(item: any){
   this.query = item.name
+  item.highlight = !item.highlight //Create a toggle when the artist is selected
 }
 
   constructor(){
